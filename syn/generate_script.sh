@@ -6,12 +6,16 @@
 PDK_LOCATION='/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib'
 OPENSPARC_LOCATION='/mnt/class_data/ecec574-w2019/OpenSPARC_src/trunk'
 
-VOLTAGE_THRESHOLD="hvt" # Transistor voltage threshold (lvt{fast, HP}, rvt, hvt{slow, LP})
+VOLTAGE_THRESHOLD="rvt" # Transistor voltage threshold (lvt{fast, HP}, rvt, hvt{slow, LP})
 TARGET_CORNER_SPEED="ss" # (slow=ss, fast=ff, typical=tt)
 TARGET_CORNER_TEMP="25c" # Temperature in Celcius (125c, 25c, n40c {-40c})
 
+# Compile Ultra + Settings
+COMPILE_ULTRA="TRUE" # TRUE or FALSE; Do you want to use compile_ultra?
+CU_PARAMS="-gate_clock" # Paramters for compile_ultra
+
 # Constraints for the CLK
-CLK_PERIOD="120" # ns
+CLK_PERIOD="1200" # ns
 CLK_LATENCY="0.4" # ns
 CLK_TRANSITION="0.1" # ns
 CLK_UNCERTAINTY="0.05" # ns
@@ -105,7 +109,11 @@ echo 'set_load '"$MAX_LOAD"' [all_outputs]' >> fpu.tcl
 echo "" >> fpu.tcl
 echo "## Compilation" >> fpu.tcl
 echo "### (NOTE: Values can be low, medium, or high)" >> fpu.tcl
-echo "compile -area_effort $AREA_EFFORT -map_effort $MAP_EFFORT -power_effort $POWER_EFFORT" >> fpu.tcl
+if [ $COMPILE_ULTRA == "TRUE" ]; then
+   echo "compile_ultra $CU_PARAMS" >> fpu.tcl
+else
+   echo "compile -area_effort $AREA_EFFORT -map_effort $MAP_EFFORT -power_effort $POWER_EFFORT" >> fpu.tcl
+fi
 echo "" >> fpu.tcl
 echo "## Generate area, cell, QOR, resources, and timing reports" >> fpu.tcl
 echo 'report_power > reports/synth_power.rpt' >> fpu.tcl
