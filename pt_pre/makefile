@@ -7,7 +7,7 @@ clean:
 generate:
 	./generate_script.sh
 	[ -d "reports" ] || mkdir reports
-	[ -d "output"] || mkdir output
+	[ -d "output" ] || mkdir output
 
 analyze: pt_pre.tcl
 	pt_shell -file pt_pre.tcl > test.log && echo "Done!" 
