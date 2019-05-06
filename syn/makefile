@@ -6,6 +6,10 @@ clean:
 
 generate:
 	./generate_script.sh
+	[ -d "const" ] || mkdir const
+	[ -d "work" ] || mkdir work
+	[ -d "reports" ] || mkdir reports
+	[ -d "output" ] || mkdir output
 
 compile: fpu.tcl
 	dc_shell -f fpu.tcl > test.log && echo "Done!" 
