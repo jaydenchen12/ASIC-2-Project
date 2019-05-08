@@ -1,9 +1,6 @@
 # Define required macros here
 SHELL = /bin/bash
 
-clean:
-	rm -f fpu.tcl const/* work/* reports/* output/* *.log default.svf
-
 generate:
 	./generate_script.sh
 	[ -d "const" ] || mkdir const
@@ -12,4 +9,9 @@ generate:
 	[ -d "output" ] || mkdir output
 
 compile: fpu.tcl
-	dc_shell -f fpu.tcl > test.log && echo "Done!" 
+	dc_shell -f fpu.tcl > test.log && echo "Done!"
+
+clean:
+	rm -f fpu.tcl const/* work/* reports/* output/* *.log default.svf
+
+
