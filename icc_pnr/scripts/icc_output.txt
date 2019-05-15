@@ -1,0 +1,5 @@
+Initializing gui preferences from file  /home/kv356@drexel.edu/.synopsys_icc_prefs.tcl
+icc_shell> exit
+
+Thank you...
+
