@@ -1,0 +1,33 @@
+Initializing gui preferences from file  /home/kv356@drexel.edu/.synopsys_icc_prefs.tcl
+icc_shell> source scripts/
+icc_shell> source scripts/init_design_icc.tcl
+Error: No Milkyway library is open. (UID-666)
+Error: File '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED_EDK/tech/star_rcxt/saed32nm_1p9m_nominal.tluplus' does not exist or it is unreadable. (RCEX-070)
+Start to load technology file /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/tech/milkyway/saed32nm_1p9m_mw.tf.
+Warning: Layer 'M1' has a pitch 0.152 that does not match the recommended wire-to-via pitch 0.13 or 0.105. (TFCHK-049)
+Warning: Layer 'M2' has a pitch 0.152 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M3' has a pitch 0.304 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M4' has a pitch 0.304 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M5' has a pitch 0.608 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M6' has a pitch 0.608 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M7' has a pitch 1.216 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M8' has a pitch 1.216 that does not match the recommended wire-to-via pitch 0.179 or 0.164. (TFCHK-049)
+Warning: Layer 'M9' has a pitch 2.432 that does not match the recommended wire-to-via pitch 1.74. (TFCHK-049)
+Warning: Layer 'MRDL' has a pitch 4.864 that does not match the recommended wire-to-via pitch 4.5. (TFCHK-049)
+Warning: Layer 'MRDL' has a pitch 4.864 that does not match the doubled pitch 2.432 or tripled pitch 3.648. (TFCHK-050)
+Warning: CapModel sections are missing. Capacitance models should be loaded with a TLU+ file later. (TFCHK-084)
+Technology file /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/tech/milkyway/saed32nm_1p9m_mw.tf has been loaded successfully.
+Error: Cannot open library /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/lib/stdcell_lvt/milkyway/saed32nm_rvt_1p9m for read. (MW-006)
+ERROR : Fail to add reference library '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/lib/stdcell_lvt/milkyway/saed32nm_rvt_1p9m'
+Error: Fail to set mw reference libraries for 'fpu.mw' (MW-215)
+Error: Cannot read file '../ASIC-2-Project/syn/output/fpu.v'. (UID-58)
+Error: Current design is not defined. (UID-4)
+Error: 0
+        Use error_info for more info. (CMD-013)
+Error: Current design is not defined. (UID-4)
+Error: Cannot get cellId for the current design. (UIG-2)
+0
+icc_shell> exit
+
+Thank you...
+
