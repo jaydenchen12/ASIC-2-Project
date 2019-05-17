@@ -2,3 +2,5 @@
 *.rpt
 *.v
 *.sdc
+*.tcl
+*.txt
