@@ -8,7 +8,8 @@ echo "# DC Synthesis Script" > syn.tcl
 echo "" >> syn.tcl
 echo "## Define path to verilog files and define WORK directory" >> syn.tcl
 echo "lappend search_path $OPENSPARC_LOCATION/T1-FPU " \
-   "$OPENSPARC_LOCATION/T1-common $OPENSPARC_COMMON_DIRS" >> syn.tcl 
+   "$OPENSPARC_LOCATION/T1-common $OPENSPARC_COMMON_DIRS " \
+   "$OPENSPARC_LOCATION/T1-CPU/mul" >> syn.tcl 
 echo "define_design_lib WORK -path \"work\"" >> syn.tcl
 echo "" >> syn.tcl
 echo "## Define library locations" >> syn.tcl
@@ -16,7 +17,7 @@ echo "set link_library $LINK_LIB" >> syn.tcl
 echo "set target_library $TARGET_LIB" >> syn.tcl
 echo "" >> syn.tcl
 echo "## Read in verilog files" >> syn.tcl
-echo 'analyze -library WORK -format verilog [ list '"$OPENSPARC_VERILOG"']' >> syn.tcl
+echo 'analyze -library WORK -format verilog [ list '"$OPENSPARC_VERILOG"'mul64.v ]' >> syn.tcl
 echo "" >> syn.tcl
 echo "elaborate fpu -architecture verilog -library WORK" >> syn.tcl
 echo "" >> syn.tcl
