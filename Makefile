@@ -4,7 +4,7 @@
 #########################################################################################
 
 # Generate all required TCL scripts using the project.config file
-scripts:
+scripts: project.config
 	./generate_scripts.sh
 
 # Set up the directory structure if pulling from an empty repository
@@ -18,7 +18,7 @@ setup:
 	[ -d "icc_pnr/output" ] || mkdir icc_pnr/output
 
 # Cleaning scripts
-clean:
+clean_all:
 	rm -Rf syn/*.tcl syn/const/* syn/work/* syn/reports/* syn/output/* syn/*.log syn/*.svf syn/alib-52
 	rm -Rf pt_pre/*.tcl pt_pre/*.log pt_pre/reports/* pt_pre/output/*
 	rm -Rf icc_pnr/scripts/*.tcl icc_pnr/output/* icc_pnr/*.log icc_pnr/*.txt icc_pnr/*.mw
