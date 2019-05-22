@@ -13,9 +13,8 @@ echo "# Initial Design ICC Script" > init_design.tcl
 echo "# Auto-generated with Bash" >> init_design.tcl
 echo "" >> init_design.tcl
 echo "## Set up search paths and libraries" >> init_design.tcl
-echo 'set search_path "$search_path '"$PDK_LOCATION"'/lib/stdcell_'"$VOLTAGE_THRESHOLD"'/db_ccs '"$OPENSPARC_LOCATION"'/T1-FPU '"$OPENSPARC_COMMON_DIRS"'"' >> init_design.tcl
-echo 'set target_library "saed32'"$VOLTAGE_THRESHOLD"'_'"$TARGET_CORNER"'.db"'\
-   >> init_design.tcl
+echo 'set search_path "$search_path '"$PDK_LOCATION"'/lib/stdcell_'"$VOLTAGE_THRESHOLD"'/db_ccs '"$OPENSPARC_LOCATION"'/T1-FPU '"$OPENSPARC_COMMON_DIRS"' '"$OPENSPARC_LOCATION"'/T1-CPU/mul "' >> init_design.tcl
+echo 'set target_library "saed32'"$VOLTAGE_THRESHOLD"'_'"$TARGET_CORNER"'.db"' >> init_design.tcl
 echo 'set link_library "* $target_library"' >> init_design.tcl
 echo "" >> init_design.tcl
 echo 'set techfile "'"$TECHFILE_LOCATION"'"' >> init_design.tcl
@@ -29,7 +28,7 @@ echo '   -mw_reference_library $ref_lib' >> init_design.tcl
 echo 'open_mw_lib $lib_name.mw' >> init_design.tcl
 echo "" >> init_design.tcl
 echo 'set design_data ../syn/output/fpu.ddc' >> init_design.tcl
-echo 'set cell_name "fpu"' >> init_design.tcl
+echo 'set cell_name "FPU"' >> init_design.tcl
 echo 'import_designs $design_data -format ddc -top $cell_name' >> init_design.tcl
 echo "" >> init_design.tcl
 echo 'set libdir "'"$LIB_DIR"'"' >> init_design.tcl
@@ -48,4 +47,5 @@ echo "" >> init_design.tcl
 echo 'read_sdc ../syn/const/fpu.sdc' >> init_design.tcl
 echo "" >> init_design.tcl
 echo 'save_mw_cel -as fpu_initial' >> init_design.tcl
+echo "" >> init_design.tcl
 echo "exit" >> init_design.tcl
