@@ -4,7 +4,7 @@
 
 ##In the layout window, click on Route -> Core Routing and Optimization
 
-route_opt -effort low
+route_opt -effort high
 
 ##Save the cel and report timing
 

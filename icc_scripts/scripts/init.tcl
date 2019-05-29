@@ -1,13 +1,13 @@
-set search_path "$search_path /mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_lvt/db_ccs
+set search_path "$search_path /mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/db_ccs
 ../source_files/TI_FPU "
-set target_library "saed32lvt_ss0p95v25c.db"
+set target_library "saed32rvt_ss0p95v25c.db"
 set link_library "* $target_library"
 
 sh rm -rf fpu.mw
 
 start_gui
 set techfile "/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/milkyway/saed32nm_1p9m_mw.tf"
-set ref_lib "/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_lvt/milkyway/saed32nm_lvt_1p9m"
+set ref_lib "/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m"
 set lib_name "fpu"
 
 set design_data ../dc_synth/output/fpu.ddc

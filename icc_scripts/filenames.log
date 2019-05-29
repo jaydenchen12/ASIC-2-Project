@@ -295,9 +295,9 @@
 /mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
 /home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/fpu.mw
 /mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/milkyway/saed32nm_1p9m_mw.tf
-/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_lvt/milkyway/saed32nm_lvt_1p9m
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
 /home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/fpu.mw
-/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_lvt/milkyway/saed32nm_lvt_1p9m
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m
 /opt/synopsys/2016/icc/libraries/syn/gtech.db
 /opt/synopsys/2016/icc/libraries/syn/standard.sldb
 /opt/synopsys/2016/icc/auxx/syn/fp/ndfa_main.tbc
@@ -353,3 +353,14 @@
 /opt/synopsys/2016/icc/auxx/syn/fp/bw/init.tcl
 /opt/synopsys/2016/icc/auxx/syn/fp/bw/utils.tcl
 /opt/synopsys/2016/icc/auxx/syn/fp/ndfa_gui.tbc
+/home/hc523@drexel.edu/ASIC-2-Project/dc_synth/const/fpu.sdc
+/opt/synopsys/2016/icc/auxx/syn/all_command_option_def.tcl
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/fpu.mw
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/scripts/floorplainning.tcl
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/scripts/place_icc.tcl
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+/opt/synopsys/2016/icc/auxx/syn/psyn/place_opt.tcl.e
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/fpu.mw
+/opt/synopsys/2016/icc/auxx/syn/psyn/clock_opt.tcl.e
