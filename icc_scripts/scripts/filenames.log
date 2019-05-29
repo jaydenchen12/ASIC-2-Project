@@ -82,3 +82,12 @@
 /opt/synopsys/2016/icc/auxx/gui/common/schematic/DialogPathSchematicFanInOut.tcl
 /opt/synopsys/2016/icc/auxx/gui/common/schematic/DialogPathSchematicAddPaths.tcl
 /opt/synopsys/2016/icc/auxx/gui/common/layout/preferences.tcl
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/scripts/init.tcl
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/star_rcxt/saed32nm_1p9m_nominal.tluplus
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/scripts/fpu.mw
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/tech/milkyway/saed32nm_1p9m_mw.tf
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_lvt/milkyway/saed32nm_lvt_1p9m
+/home/hc523@drexel.edu/ASIC-2-Project/icc_scripts/scripts/fpu.mw
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm/lib/stdcell_lvt/milkyway/saed32nm_lvt_1p9m
+/opt/synopsys/2016/icc/auxx/syn/all_command_option_def.tcl
