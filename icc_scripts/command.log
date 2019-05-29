@@ -1,0 +1,166 @@
+#@ # 
+#@ # Running icc_shell Version L-2016.03-SP5-1 for linux64 -- Dec 12, 2016
+#@ # Date:   Wed May 29 07:42:02 2019
+#@ # Run by: hc523@xunil-03.coe.drexel.edu
+#@ 
+
+source scripts/init_design.tcl
+#@ # -- Starting source scripts/init_design.tcl
+
+#@ set search_path "$search_path /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_hvt/db_ccs ~/ASIC-2-Project/source_files/T1-FPU/"
+#@ 
+#@ set target_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db]
+#@ 
+#@ set link_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db ]
+#@ 
+#@ set techfile "/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/tech/milkyway/saed32nm_1p9m_mw.tf"
+#@ set ref_lib "/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_hvt/milkyway/saed32nm_hvt_1p9m"
+#@ set lib_name "fpu"
+#@ set mw_logic0_net VSS
+#@ set mw_logic1_net VDDA
+#@ create_mw_lib $lib_name.mw                  -technology $techfile                  -mw_reference_library $ref_lib
+#@ open_mw_lib $lib_name.mw
+#@ 
+#@ set design_data ../dc_synth/output/fpu.ddc
+#@ set cell_name "FPU"
+#@ import_designs $design_data -format ddc -top $cell_name
+#@ 
+#@ set libdir "/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/tech/star_rcxt"
+#@ set tlupmax "$libdir/saed32nm_1p9m_Cmax.tluplus"
+#@ set tlunom "$libdir/saed32nm_1p9m_nominal.tluplus"
+#@ set tlupmin "$libdir/saed32nm_1p9m_Cmin.tluplus"
+#@ set tech2itf "$libdir/saed32nm_tf_itf_tluplus.map"
+#@ set_tlu_plus_files -max_tluplus $tlunom -tech2itf_map $tech2itf
+#@ 
+#@ 
+#@ read_verilog ../dc_synth/output/fpu.v
+#@ 
+#@ uniquify_fp_mw_cel
+#@ 
+#@ link
+#@ 
+#@ read_sdc ../dc_synth/const/fpu.sdc
+#@ # -- Starting source /opt/synopsys/2016/icc/auxx/syn/all_command_option_def.tcl
+
+#@ define_proc_attributes all_physical_only_cells -info "Get the collection of physical only cells" -define_args {
+#@ { -coordinates "coordinates of bounding box" "llx lly urx ury" string {optional}} 
+#@ { -lib_cells "get cells related to these objects" "objects" list {optional}} 
+#@ { -cell_name "list of cell name patterns and collections" "patterns" list {optional}} 
+#@ { "" "Existing collection" "arguments" list {optional}} 
+#@ }
+#@ define_proc_attributes all_physical_only_nets  -info "Get the collection of physical only nets" -define_args {
+#@ { "" "list of cell name patterns and collections" "arguments" list {optional}} 
+#@ } 
+#@ define_proc_attributes all_drc_violated_nets -info "Returns all DRC violated nets" -define_args { 
+#@ { -max_capacitance "max Cap DRC violated nets" "" string {optional}} 
+#@ { -max_transition "max transition time DRC violated nets" "" string {optional}} 
+#@ { -max_fanout "max fanout DRC violated nets" "" string {optional}}
+#@ { -threshold "Captures all values more than or equal to threshold" "threshold" string {optional}} 
+#@ { -bound "Captures all values less than or equal to bound bound" "upper" string {optional}} 
+#@ { "" "objects patterns OR collection" "arguments"  list {optional}} 
+#@ }
+#@ define_proc_attributes all_fanin -info "return pins or cells in transitive fanin" -define_args { 
+#@ { -to "set of sink ports, pins, or nets" "sink_list" list {optional}} 
+#@ { -startpoints_only  "return only the timing startpoints" "" string {optional}} 
+#@ { -exclude_bboxes "black-boxes are not included in return-set" "" string {optional}} 
+#@ { -break_on_bboxes  "traversal stops at black-boxes" "" string {optional}} 
+#@ { -only_cells "only cells are included in the return-set" "" string {optional}} 
+#@ { -flat "trace entire design instead of just current hierarchy" "" string {optional}} 
+#@ { -levels "maximum number of levels of logic to traverse" "n" string {optional}} 
+#@ { -trace_arcs "Type of network arcs to trace. Values: timing, all" "arc_type" string {optional}}
+#@ }
+#@ define_proc_attributes all_high_fanout -info "Returns all high fanout objects" -define_args { 
+#@ { -nets "high fanout nets" "" string {optional}} 
+#@ { -threshold "high fanout threshold: value>=0" "threshold" string {optional}} 
+#@ { -through_buf_inv "treat buffers and inverters as transparent -check for transitive fanout" "" string {optional}} 
+#@ { "" "objects patterns OR collection" "arguments" string {optional}} 
+#@ }
+#@ define_proc_attributes all_ideal_nets -info "Returns all ideal nets" -define_args { 
+#@ { "" "objects patterns OR collection" "arguments" string {optional}} 
+#@ }
+#@ define_proc_attributes all_inputs -info "return input ports" -define_args { 
+#@ { -clock "ports with input delay relative to clock" "clock" string {optional}} 
+#@ { -edge_triggered "ports with non-level-sensitive input delay" "" string {optional}} 
+#@ { -level_sensitive "ports with level-sensitive input delay" "" string {optional}} 
+#@ }
+#@ define_proc_attributes all_outputs -info "return output ports" -define_args { 
+#@ { -clock "ports with output delay relative to clock" "clock" string {optional}} 
+#@ { -edge_triggered "ports with non-level-sensitive output delay" "" string {optional}} 
+#@ { -level_sensitive "ports with level-sensitive output delay" "" string {optional}} 
+#@ }
+#@ define_proc_attributes all_threestate -info "Returns all threestate objects" -define_args { 
+#@ { -nets "threestate nets" "" string {optional}} 
+#@ { "" "objects patterns OR collection" "arguments" string {optional}} 
+#@ }
+#@ define_proc_attributes all_dont_touch -info "Returns all dont touch objects" -define_args { 
+#@ { -nets "Dont touch nets" "" string {optional}} 
+#@ { -cells "Dont touch cells" "" string {optional}} 
+#@ { "" "Dont touch patterns OR collections" "patterns" string {optional}} 
+#@ }
+#@ define_proc_attributes all_size_only_cells -info "Returns all size_only cells" -define_args { 
+#@ { "" "Object patterns OD collections" "patterns" string {optional}} 
+#@ }
+#@ define_proc_attributes all_clocks -info "return all clocks in the current design"  
+#@ define_proc_attributes all_designs -info "return all designs" 
+#@ define_proc_attributes all_registers  -info "create a collection of register cells or pins" -define_args { 
+#@ { -no_hierarchy "only search the top level of hierarchy" "" string {optional}} 
+#@ {-rise_clock "return registers triggered by rise edge of this clock" "rise_clock" string {optional}}
+#@ {-fall_clock "return registers triggered by rise edge of this clock" "fall_clock" string {optional}}
+#@ { -clock "return registers of this clock" "clock" string {optional}} 
+#@ { -cells "return cells - this is the default" "" string {optional}} 
+#@ { -data_pins "return data_pins" "" string {optional}} 
+#@ { -clock_pins "return clock_pins" "" string {optional}} 
+#@ { -slave_clock_pins "return slave_clock_pin" "" string {optional}} 
+#@ { -inverted_output "return FF's with inverted output phase" "" string {optional}} 
+#@ { -output_pins "return output_pins" "" string {optional}} 
+#@ { -level_sensitive "only consider level sensitive registers" "" string {optional}} 
+#@ { -edge_triggered "only consider edge triggered register" "" string {optional}} 
+#@ { -master_slave "only consider master/slave registers" "" string {optional}} 
+#@ }
+#@ define_proc_attributes all_critical_cells -info "return critical cells" -define_args { 
+#@ { -slack_range "critical range to select cells:value>=0" "range_value" string {optional}} 
+#@ }
+#@ define_proc_attributes all_critical_pins -info "return critical pins" -define_args { 
+#@ { -slack_range "critical range to select cells:value>=0" "range_value" string {optional}} 
+#@ { -type "pintype: Values: endpoint, startpoint" "pin_type" string {optional}} 
+#@ }
+#@ define_proc_attributes get_magnet_cells -info "return magnet cells collection" -define_args {
+#@ { -stop_by_sequential_cells "don't pull sequential cells" "" string {optional}} 
+#@ { -exclude_buffers "skip through buffers in levels" "" string {optional}} 
+#@ { -exclude_cells "list of excluded cells list" "" string {optional}}
+#@ { -logical_level "number of logical levels to pull for placement" "integer" string {optional}} 
+#@ { -stop_points "list of stop points where to stop magnetizing paths" "object_list" list {optional}} 
+#@ { "" "a list of magnet objects" "magnet_objects" list {optional}} 
+#@ }
+#@ define_proc_attributes all_fanout -info "return pins or cells in transitive fanout" -define_args {
+#@ {-clock_tree "return all clock tree components in design" "" string {optional}}
+#@ {-from "set of source ports, pins, or nets" "source_list" list {optional}}
+#@ {-endpoints_only "return only the timing endpoints" "" string {optional}}
+#@ {-exclude_bboxes "black-boxes are not included in return-set" "" string {optional}}
+#@ {-break_on_bboxes "traversal stops at black-boxes" "" string {optional}}
+#@ {-only_cells "only cells are included in the return-set" "" string {optional}}
+#@ {-flat "trace entire design instead of just current hierarchy" "" string {optional}}
+#@ {-levels "maximum number of levels of logic to traverse" "n" string {optional}}
+#@ {-trace_arcs "Type of network arcs to trace. Values: timing, all" "arc_type" string {optional}}
+#@ }
+#@ define_proc_attributes all_physical_only_ports -info " Get the collection of physical only ports" -define_args {
+#@ {"" "list of cell name patterns and collections" "arguments" list {optional}}
+#@ }
+#@ define_proc_attributes get_matching_nets_for_pattern -info "Get matched nets for a certain net pattern" -define_args { 
+#@ { -pattern "pattern id" "integer" string {optional}} 
+#@ { -optimizable "Return all nets that can be optimized" "" string {optional}} 
+#@ { -transition_lower_limit "nets with transition equal or greater than lower limit" "lower_limit" string {optional}} 
+#@ { -transition_upper_limit "nets with transition less than upper limit" "upper_limit" string {optional}} 
+#@ { -setup_slack_lower_limit "nets with slack equal or greater than lower limit" "lower_limit" string {optional}} 
+#@ { -setup_slack_upper_limit "nets with slack less than upper limit" "upper_limit" string {optional}} 
+#@ { -hold_slack_lower_limit "nets with hold slack equal or greater than lower limit" "lower_limit" string {optional}} 
+#@ { -hold_slack_upper_limit "nets with hold slack less than upper limit" "upper_limit" string {optional}} 
+#@ }
+#@ # -- End source /opt/synopsys/2016/icc/auxx/syn/all_command_option_def.tcl
+
+#@ 
+#@ save_mw_cel -as fpu_initial
+#@ 
+#@ 
+#@ # -- End source scripts/init_design.tcl
+
