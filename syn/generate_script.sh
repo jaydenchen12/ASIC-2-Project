@@ -15,7 +15,11 @@ COMPILE_ULTRA="TRUE" # TRUE or FALSE; Do you want to use compile_ultra?
 CU_PARAMS="-gate_clock" # Paramters for compile_ultra
 
 # Constraints for the CLK
+<<<<<<< HEAD
+CLK_PERIOD="10" # ns
+=======
 CLK_PERIOD="1200" # ns
+>>>>>>> 6bd86cc6b4b5b62f8f220842150e3298dc634f23
 CLK_LATENCY="0.4" # ns
 CLK_TRANSITION="0.1" # ns
 CLK_UNCERTAINTY="0.05" # ns
@@ -98,14 +102,14 @@ echo "check_design > reports/synth_check_design.rpt" >> fpu.tcl
 echo "" >> fpu.tcl
 echo "## Create constraints" >> fpu.tcl
 echo 'create_clock -period '"$CLK_PERIOD"' [get_ports gclk]' >> fpu.tcl
-echo 'set_clock_latency -max '"$CLK_LATENCY"' [get_ports gclk]' >> fpu.tcl
-echo '# set_clock_uncertainty '"$CLK_UNCERTAINTY"' [get_ports gclk]' >> fpu.tcl
-echo 'set_clock_transition '"$CLK_TRANSITION"' [get_clocks gclk]' >> fpu.tcl
-echo '# set_input_delay '"$INPUT_DELAY"' [ remove_from_collection [all_inputs] clk ] -clock gclk' >> fpu.tcl
-echo 'set_output_delay '"$OUTPUT_DELAY"' -max -clock [get_clocks gclk] [all_outputs]' >> fpu.tcl
+# echo 'set_clock_latency -max '"$CLK_LATENCY"' [get_ports gclk]' >> fpu.tcl
+# echo '# set_clock_uncertainty '"$CLK_UNCERTAINTY"' [get_ports gclk]' >> fpu.tcl
+# echo 'set_clock_transition '"$CLK_TRANSITION"' [get_clocks gclk]' >> fpu.tcl
+# echo '# set_input_delay '"$INPUT_DELAY"' [ remove_from_collection [all_inputs] clk ] -clock gclk' >> fpu.tcl
+# echo 'set_output_delay '"$OUTPUT_DELAY"' -max -clock [get_clocks gclk] [all_outputs]' >> fpu.tcl
 echo "" >> fpu.tcl
-echo 'set_max_area '"$MAX_AREA" >> fpu.tcl
-echo 'set_load '"$MAX_LOAD"' [all_outputs]' >> fpu.tcl
+# echo 'set_max_area '"$MAX_AREA" >> fpu.tcl
+# echo 'set_load '"$MAX_LOAD"' [all_outputs]' >> fpu.tcl
 echo "" >> fpu.tcl
 echo "## Compilation" >> fpu.tcl
 echo "### (NOTE: Values can be low, medium, or high)" >> fpu.tcl

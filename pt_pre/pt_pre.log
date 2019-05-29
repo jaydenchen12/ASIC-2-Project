@@ -1,0 +1,420 @@
+
+                                 PrimeTime (R)
+
+              Version L-2016.06-SP3-1 for linux64 - Jan 12, 2017 
+
+                    Copyright (c) 1988 - 2017 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+# PrimeTime Analysis Script
+# Auto-generated with Bash
+## Define library locations
+set link_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db ]
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db
+set target_library [ list /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db ]
+/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db /mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db
+## Read in verilog files
+read_verilog ../syn/output/fpu.v
+1
+## Set top module name
+current_design fpu
+Information: current_design won't return any data before link (DES-071)
+## Read SDC from synthesis
+source ../syn/const/fpu.sdc
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Loading verilog file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v'
+Information: tri converted to a wire with no special attributes
+	at line 12 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v125c.db'
+Information: tri converted to a wire with no special attributes
+	at line 1280 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: Renamed scalar net 'dout[4]' to 'dout[4]1' in design 'bw_r_rf16x160'. (DBR-020)
+Information: Renamed scalar net 'dout[3]' to 'dout[3]1' in design 'bw_r_rf16x160'. (DBR-020)
+Information: Renamed scalar net 'dout[2]' to 'dout[2]1' in design 'bw_r_rf16x160'. (DBR-020)
+Information: Renamed scalar net 'dout[1]' to 'dout[1]1' in design 'bw_r_rf16x160'. (DBR-020)
+Information: Renamed scalar net 'dout[0]' to 'dout[0]1' in design 'bw_r_rf16x160'. (DBR-020)
+Information: tri converted to a wire with no special attributes
+	at line 13405 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 13406 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21073 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21083 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21111 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21124 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21670 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21671 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 21672 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24792 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24805 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24974 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24975 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24976 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24977 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24978 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 24979 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 25985 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 25986 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 25987 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27129 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27130 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27131 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27132 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27133 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27134 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27135 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27136 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27137 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27138 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27139 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27140 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27141 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27142 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27143 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27144 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27145 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27146 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27147 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27148 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27149 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27150 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27151 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27152 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27153 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27154 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27155 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27156 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27157 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27158 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27159 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27160 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27161 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27162 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27163 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27164 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27165 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27166 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27167 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27168 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27169 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27170 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27171 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27172 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27173 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27174 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27175 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27176 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27177 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27178 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27179 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27180 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27181 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27182 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27183 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27184 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27185 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 27186 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: Renamed scalar net 'm2stg_frac1_array_in[0]' to 'm2stg_frac1_array_in[0]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[1]' to 'm2stg_frac1_array_in[1]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[2]' to 'm2stg_frac1_array_in[2]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[3]' to 'm2stg_frac1_array_in[3]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[4]' to 'm2stg_frac1_array_in[4]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[5]' to 'm2stg_frac1_array_in[5]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[6]' to 'm2stg_frac1_array_in[6]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[7]' to 'm2stg_frac1_array_in[7]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[8]' to 'm2stg_frac1_array_in[8]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[9]' to 'm2stg_frac1_array_in[9]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[10]' to 'm2stg_frac1_array_in[10]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[11]' to 'm2stg_frac1_array_in[11]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[12]' to 'm2stg_frac1_array_in[12]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[13]' to 'm2stg_frac1_array_in[13]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[14]' to 'm2stg_frac1_array_in[14]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[15]' to 'm2stg_frac1_array_in[15]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[16]' to 'm2stg_frac1_array_in[16]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[17]' to 'm2stg_frac1_array_in[17]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[18]' to 'm2stg_frac1_array_in[18]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[19]' to 'm2stg_frac1_array_in[19]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[20]' to 'm2stg_frac1_array_in[20]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[21]' to 'm2stg_frac1_array_in[21]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[22]' to 'm2stg_frac1_array_in[22]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[23]' to 'm2stg_frac1_array_in[23]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[24]' to 'm2stg_frac1_array_in[24]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[25]' to 'm2stg_frac1_array_in[25]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[26]' to 'm2stg_frac1_array_in[26]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[27]' to 'm2stg_frac1_array_in[27]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[28]' to 'm2stg_frac1_array_in[28]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[29]' to 'm2stg_frac1_array_in[29]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[30]' to 'm2stg_frac1_array_in[30]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[31]' to 'm2stg_frac1_array_in[31]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[32]' to 'm2stg_frac1_array_in[32]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[33]' to 'm2stg_frac1_array_in[33]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[34]' to 'm2stg_frac1_array_in[34]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[35]' to 'm2stg_frac1_array_in[35]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[36]' to 'm2stg_frac1_array_in[36]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[37]' to 'm2stg_frac1_array_in[37]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[38]' to 'm2stg_frac1_array_in[38]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[39]' to 'm2stg_frac1_array_in[39]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[40]' to 'm2stg_frac1_array_in[40]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[41]' to 'm2stg_frac1_array_in[41]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[42]' to 'm2stg_frac1_array_in[42]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[43]' to 'm2stg_frac1_array_in[43]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[44]' to 'm2stg_frac1_array_in[44]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[45]' to 'm2stg_frac1_array_in[45]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[46]' to 'm2stg_frac1_array_in[46]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[47]' to 'm2stg_frac1_array_in[47]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[48]' to 'm2stg_frac1_array_in[48]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[49]' to 'm2stg_frac1_array_in[49]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[50]' to 'm2stg_frac1_array_in[50]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[51]' to 'm2stg_frac1_array_in[51]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: Renamed scalar net 'm2stg_frac1_array_in[52]' to 'm2stg_frac1_array_in[52]1' in design 'fpu_mul_frac_dp'. (DBR-020)
+Information: tri converted to a wire with no special attributes
+	at line 31398 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31399 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31400 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31401 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31402 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31403 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31404 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31405 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31406 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31407 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31408 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31409 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31410 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31411 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: Renamed scalar net '*Logic1*' to '*Logic1*1' in design 'fpu_mul'. (DBR-020)
+Information: Renamed scalar net '*Logic0*' to '*Logic0*1' in design 'fpu_mul'. (DBR-020)
+Information: tri converted to a wire with no special attributes
+	at line 31937 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 31938 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35148 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35158 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35168 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35187 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35215 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35228 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35241 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35254 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35267 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35497 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 35498 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 36864 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 36874 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 36884 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 36894 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 36907 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 37494 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Information: tri converted to a wire with no special attributes
+	at line 37495 in /home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v (SVR-21)
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95v25c.db'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/stdcell_rvt/db_ccs/saed32rvt_ss0p95vn40c.db'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v125c.db'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95v25c.db'
+Loading db file '/mnt/class_data/ecec574-w2019/PDKs/SAED32nm_new/SAED32_EDK/lib/sram/db_ccs/saed32sram_ss0p95vn40c.db'
+Linking design fpu...
+Warning: Unable to resolve reference to 'SNPS_CLOCK_GATE_HIGH_fpu_1' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'fpu_add' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE69' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'SNPS_CLOCK_GATE_HIGH_fpu_0' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_6' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'fpu_div' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'fpu_mul' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'bw_r_rf16x160' in 'fpu'. (LNK-005)
+Warning: Unable to resolve reference to 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_5' in 'fpu'. (LNK-005)
+Information: Creating black box for i_fpu_inq_sram/bw_r_rf16x160... (LNK-043)
+Information: Creating black box for fpu_add/fpu_add... (LNK-043)
+Information: Creating black box for fpu_mul/fpu_mul... (LNK-043)
+Information: Creating black box for fpu_div/fpu_div... (LNK-043)
+Information: Creating black box for clk_gate_fpu_in/fpu_in_ctl/i_inq_div_rdptr/q_reg/SNPS_CLOCK_GATE_HIGH_fpu_1... (LNK-043)
+Information: Creating black box for fpu_in/fpu_in_dp/i_fp_srcb_in/clk_gate_q_reg/SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE69... (LNK-043)
+Information: Creating black box for clk_gate_fpu_in/fpu_in_ctl/i_inq_rdptr_dec/q_reg/SNPS_CLOCK_GATE_HIGH_fpu_0... (LNK-043)
+Information: Creating black box for fpu_in/fpu_in_ctl/i_inq_wrptr/clk_gate_q_reg/SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_6... (LNK-043)
+Information: Creating black box for fpu_in/fpu_in_ctl/i_inq_div_wrptr/clk_gate_q_reg/SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_5... (LNK-043)
+Information: Removing 44 unneeded designs..... (LNK-034)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_bw_r_rf16x160_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'bw_r_rf16x160' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE64_0_7' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE64_0_1' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_add_frac_dp' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE8' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE31' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE11_0_9' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_8' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_add_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_add_1' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_add' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_mul_ctl_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_mul_ctl_1' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_mul_ctl' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_2' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_mul_exp_dp' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_6' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_mul_frac_dp' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_mul' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_4' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_4' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_3' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE55_0_1' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_div_frac_dp' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE3_0_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE5_0_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE6_0_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE3_0_2' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE11_0_4' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE13_0_7' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_div_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_div_1' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_div_2' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_div_4' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_div_5' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'fpu_div' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffe_s_SIZE69' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_6' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_dffre_s_SIZE4_0_5' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_0' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: Module 'SNPS_CLOCK_GATE_HIGH_fpu_1' in file '/home/hc523@drexel.edu/ASIC-2-Project/syn/output/fpu.v' is not used in the current design .  (LNK-039)
+Information: 263 (89.46%) library cells are unused in library saed32rvt_ss0p95v125c..... (LNK-045)
+Information: 294 (100.00%) library cells are unused in library saed32rvt_ss0p95v25c..... (LNK-045)
+Information: 294 (100.00%) library cells are unused in library saed32rvt_ss0p95vn40c..... (LNK-045)
+Information: 35 (100.00%) library cells are unused in library saed32sram_ss0p95v125c..... (LNK-045)
+Information: 35 (100.00%) library cells are unused in library saed32sram_ss0p95v25c..... (LNK-045)
+Information: 35 (100.00%) library cells are unused in library saed32sram_ss0p95vn40c..... (LNK-045)
+Information: total 956 library cells are unused (LNK-046)
+1
+1
+## Analysis reports
+report_timing -from [all_inputs] -max_paths 100 -to [all_registers -data_pins]       > reports/timing.rpt
+report_timing -from [all_register -clock_pins] -max_paths 100 -to       [all_registers -data_pins] >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -max_paths 100 -to       [all_outputs] >> reports/timing.rpt
+report_timing -from [all_inputs] -max_paths 100 -to       [all_outputs] >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -max_paths 100 -to       [all_registers -data_pins] -delay_type max >> reports/timing.rpt
+report_timing -from [all_registers -clock_pins] -max_paths 100 -to       [all_registers -data_pins] -delay_type min >> reports/timing.rpt
+report_timing -transition_time -capacitance -nets -input_pins -from       [all_registers -clock_pins] -to [all_registers -data_pins] > reports/timing.tran.cap.rpt
+## Save outputs
+save_session output/fpu.session
+Saving netlist information.....
+Saving miscellaneous application information.....
+Saving timing information.....
+Saving variable information.....
+1
+exit
+
+Timing updates: 1 (1 implicit, 0 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 684.26 MB
+CPU usage for this session: 5 seconds 
+Elapsed time for this session: 5 seconds
+Diagnostics summary: 15 warnings, 66 informationals
+
+Thank you for using pt_shell!

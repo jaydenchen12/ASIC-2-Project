@@ -2,7 +2,7 @@
 SHELL = /bin/bash
 
 clean:
-	rm -f pt_pre.tcl reports/* output/* 
+	rm -rf pt_pre.tcl reports/* output/* 
 
 generate:
 	./generate_script.sh
