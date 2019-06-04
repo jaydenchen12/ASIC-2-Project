@@ -10,14 +10,14 @@ Report : timing
 	-sort_by slack
 Design : fpu
 Version: L-2016.06-SP3-1
-Date   : Wed May 29 17:32:37 2019
+Date   : Mon Jun  3 22:43:00 2019
 ****************************************
 
 Warning: There are 1906 invalid end points for constrained paths. (UITE-416)
 
-  Startpoint: fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre1/q_reg[17]
+  Startpoint: fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]
                (rising edge-triggered flip-flop clocked by gclk)
-  Endpoint: fpu_mul/fpu_mul_exp_dp/i_mul_exp_out/q_reg[3]
+  Endpoint: fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre1/q_reg[12]
                (rising edge-triggered flip-flop clocked by gclk)
   Path Group: gclk
   Path Type: max
@@ -26,285 +26,444 @@ Warning: There are 1906 invalid end points for constrained paths. (UITE-416)
   -----------------------------------------------------------------------------
   clock gclk (rise edge)                          0.10       0.00       0.00
   clock network delay (ideal)                                0.10       0.10
-  fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre1/q_reg[17]/CLK (SDFFX1_RVT)
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/CLK (SDFFX1_RVT)
                                                   0.10       0.00       0.10 r
-  fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre1/q_reg[17]/Q (SDFFX1_RVT)
-                                                  0.02       0.19       0.29 f
-  fpu_mul/fpu_mul_frac_dp/i_m5stg_frac_pre1/q[17] (net)
-                                 1     0.49 
-  fpu_mul/fpu_mul_frac_dp/U626/A4 (NAND4X0_RVT)
-                                                  0.02       0.01       0.30 f
-  fpu_mul/fpu_mul_frac_dp/U626/Y (NAND4X0_RVT)
-                                                  0.10       0.08       0.38 r
-  fpu_mul/fpu_mul_frac_dp/m5stg_frac_32_0[17] (net)
-                                 6     3.56 
-  fpu_mul/fpu_mul_frac_dp/add_476/U60/A1 (AND2X1_RVT)
-                                                  0.10       7.07       7.45 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U60/Y (AND2X1_RVT)
-                                                  0.03       0.07       7.52 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[15] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U59/A2 (AND2X1_RVT)
-                                                  0.03       0.05       7.57 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U59/Y (AND2X1_RVT)
-                                                  0.03       0.06       7.63 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[16] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U58/A2 (AND2X1_RVT)
-                                                  0.03       0.05       7.68 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U58/Y (AND2X1_RVT)
-                                                  0.03       0.06       7.74 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[17] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U57/A2 (AND2X1_RVT)
-                                                  0.03       0.05       7.79 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U57/Y (AND2X1_RVT)
-                                                  0.03       0.06       7.85 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[18] (net)
-                                 2     1.03 
-  fpu_mul/fpu_mul_frac_dp/add_476/U56/A2 (AND2X1_RVT)
-                                                  0.03       0.06       7.90 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U56/Y (AND2X1_RVT)
-                                                  0.03       0.06       7.96 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[19] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U55/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.01 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U55/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.07 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[20] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U54/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.12 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U54/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.18 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[21] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U53/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.23 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U53/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.28 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[22] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U52/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.33 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U52/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.39 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[23] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U51/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.44 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U51/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.50 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[24] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U50/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.55 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U50/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.61 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[25] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U49/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.66 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U49/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.71 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[26] (net)
-                                 2     0.89 
-  fpu_mul/fpu_mul_frac_dp/add_476/U48/A2 (AND2X1_RVT)
-                                                  0.03       0.05       8.76 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U48/Y (AND2X1_RVT)
-                                                  0.03       0.06       8.82 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[27] (net)
-                                 2     0.92 
-  fpu_mul/fpu_mul_frac_dp/add_476/U19/A1 (AND2X1_RVT)
-                                                  0.03       0.05       8.87 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U19/Y (AND2X1_RVT)
-                                                  0.02       0.05       8.92 r
-  fpu_mul/fpu_mul_frac_dp/add_476/n18 (net)
-                                 1     0.51 
-  fpu_mul/fpu_mul_frac_dp/add_476/U9/A2 (AND2X1_RVT)
-                                                  0.02       0.01       8.94 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U9/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.00 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[29] (net)
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q_reg[0]/Q (SDFFX1_RVT)
+                                                  0.04       0.19       0.29 r
+  fpu_add/fpu_add_frac_dp/i_a3stg_frac2/q[0] (net)
+                                 2     2.15 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_0/B (FADDX1_RVT)
+                                                  0.04       0.11       0.40 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_0/CO (FADDX1_RVT)
+                                                  0.05       0.10       0.51 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[1] (net)
                                  1     1.34 
-  fpu_mul/fpu_mul_frac_dp/add_476/U1_29/CI (FADDX1_RVT)
-                                                  0.03       0.03       9.03 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U1_29/CO (FADDX1_RVT)
-                                                  0.04       0.09       9.12 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[30] (net)
-                                 2     0.92 
-  fpu_mul/fpu_mul_frac_dp/add_476/U26/A1 (AND2X1_RVT)
-                                                  0.04       0.05       9.17 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U26/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.23 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[31] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U27/A2 (AND2X1_RVT)
-                                                  0.03       0.08       9.31 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U27/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.38 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[32] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U28/A2 (AND2X1_RVT)
-                                                  0.03       0.08       9.46 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U28/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.52 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[33] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U29/A2 (AND2X1_RVT)
-                                                  0.03       0.08       9.60 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U29/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.67 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[34] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U30/A2 (AND2X1_RVT)
-                                                  0.03       0.08       9.75 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U30/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.81 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[35] (net)
-                                 2     1.39 
-  fpu_mul/fpu_mul_frac_dp/add_476/U31/A2 (AND2X1_RVT)
-                                                  0.03       0.08       9.89 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U31/Y (AND2X1_RVT)
-                                                  0.03       0.06       9.95 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[36] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U32/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.03 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U32/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.10 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[37] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U33/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.18 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U33/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.24 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[38] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U34/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.32 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U34/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.39 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[39] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U35/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.47 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U35/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.53 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[40] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U36/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.61 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U36/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.68 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[41] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U37/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.76 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U37/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.82 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[42] (net)
-                                 2     1.39 
-  fpu_mul/fpu_mul_frac_dp/add_476/U38/A2 (AND2X1_RVT)
-                                                  0.03       0.08      10.90 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U38/Y (AND2X1_RVT)
-                                                  0.03       0.06      10.96 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[43] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U39/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.04 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U39/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.11 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[44] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U40/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.19 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U40/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.25 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[45] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U41/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.33 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U41/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.40 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[46] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U42/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.48 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U42/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.54 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[47] (net)
-                                 2     1.39 
-  fpu_mul/fpu_mul_frac_dp/add_476/U43/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.62 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U43/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.68 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[48] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U44/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.76 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U44/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.83 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[49] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U45/A2 (AND2X1_RVT)
-                                                  0.03       0.08      11.91 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U45/Y (AND2X1_RVT)
-                                                  0.03       0.06      11.97 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[50] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U46/A2 (AND2X1_RVT)
-                                                  0.03       0.08      12.05 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U46/Y (AND2X1_RVT)
-                                                  0.03       0.06      12.12 r
-  fpu_mul/fpu_mul_frac_dp/add_476/carry[51] (net)
-                                 2     1.48 
-  fpu_mul/fpu_mul_frac_dp/add_476/U25/A2 (AND2X1_RVT)
-                                                  0.03       0.08      12.20 r
-  fpu_mul/fpu_mul_frac_dp/add_476/U25/Y (AND2X1_RVT)
-                                                  0.04       0.07      12.26 r
-  fpu_mul/fpu_mul_frac_dp/add_476/SUM[52] (net)
-                                 4     1.75 
-  fpu_mul/fpu_mul_exp_dp/U88/A2 (NAND2X0_RVT)     0.04       1.98      14.24 r
-  fpu_mul/fpu_mul_exp_dp/U88/Y (NAND2X0_RVT)      0.05       0.05      14.30 f
-  fpu_mul/fpu_mul_exp_dp/n79 (net)
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_1/CI (FADDX1_RVT)
+                                                  0.05       0.03       0.54 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_1/CO (FADDX1_RVT)
+                                                  0.05       0.10       0.64 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[2] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_2/CI (FADDX1_RVT)
+                                                  0.05       0.03       0.67 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_2/CO (FADDX1_RVT)
+                                                  0.05       0.10       0.77 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[3] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_3/CI (FADDX1_RVT)
+                                                  0.05       0.03       0.80 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_3/CO (FADDX1_RVT)
+                                                  0.05       0.10       0.90 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[4] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_4/CI (FADDX1_RVT)
+                                                  0.05       0.03       0.94 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_4/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.04 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[5] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_5/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.07 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_5/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.17 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[6] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_6/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.20 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_6/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.30 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[7] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_7/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.34 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_7/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.44 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[8] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_8/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.47 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_8/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.57 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[9] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_9/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.60 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_9/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.70 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[10] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_10/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.74 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_10/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.84 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[11] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_11/CI (FADDX1_RVT)
+                                                  0.05       0.03       1.87 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_11/CO (FADDX1_RVT)
+                                                  0.05       0.10       1.97 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[12] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_12/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.00 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_12/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.10 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[13] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_13/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.13 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_13/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.23 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[14] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_14/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.27 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_14/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.37 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[15] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_15/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.40 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_15/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.50 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[16] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_16/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.53 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_16/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.63 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[17] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_17/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.67 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_17/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.77 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[18] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_18/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.80 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_18/CO (FADDX1_RVT)
+                                                  0.05       0.10       2.90 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[19] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_19/CI (FADDX1_RVT)
+                                                  0.05       0.03       2.93 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_19/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.03 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[20] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_20/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.07 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_20/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.17 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[21] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_21/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.20 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_21/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.30 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[22] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_22/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.33 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_22/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.43 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[23] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_23/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.46 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_23/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.57 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[24] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_24/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.60 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_24/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.70 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[25] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_25/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.73 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_25/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.83 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[26] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_26/CI (FADDX1_RVT)
+                                                  0.05       0.03       3.86 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_26/CO (FADDX1_RVT)
+                                                  0.05       0.10       3.96 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[27] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_27/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.00 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_27/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.10 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[28] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_28/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.13 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_28/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.23 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[29] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_29/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.26 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_29/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.36 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[30] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_30/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.40 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_30/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.50 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[31] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_31/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.53 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_31/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.63 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[32] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_32/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.66 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_32/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.76 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[33] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_33/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.79 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_33/CO (FADDX1_RVT)
+                                                  0.05       0.10       4.90 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[34] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_34/CI (FADDX1_RVT)
+                                                  0.05       0.03       4.93 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_34/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.03 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[35] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_35/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.06 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_35/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.16 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[36] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_36/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.19 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_36/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.30 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[37] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_37/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.33 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_37/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.43 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[38] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_38/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.46 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_38/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.56 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[39] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_39/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.60 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_39/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.70 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[40] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_40/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.73 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_40/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.83 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[41] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_41/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.86 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_41/CO (FADDX1_RVT)
+                                                  0.05       0.10       5.96 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[42] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_42/CI (FADDX1_RVT)
+                                                  0.05       0.03       5.99 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_42/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.10 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[43] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_43/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.13 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_43/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.23 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[44] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_44/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.26 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_44/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.36 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[45] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_45/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.39 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_45/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.49 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[46] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_46/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.53 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_46/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.63 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[47] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_47/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.66 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_47/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.76 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[48] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_48/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.79 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_48/CO (FADDX1_RVT)
+                                                  0.05       0.10       6.89 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[49] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_49/CI (FADDX1_RVT)
+                                                  0.05       0.03       6.93 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_49/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.03 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[50] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_50/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.06 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_50/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.16 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[51] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_51/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.19 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_51/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.29 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[52] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_52/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.32 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_52/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.43 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[53] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_53/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.46 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_53/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.56 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[54] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_54/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.59 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_54/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.69 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[55] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_55/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.72 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_55/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.82 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[56] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_56/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.86 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_56/CO (FADDX1_RVT)
+                                                  0.05       0.10       7.96 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[57] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_57/CI (FADDX1_RVT)
+                                                  0.05       0.03       7.99 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_57/CO (FADDX1_RVT)
+                                                  0.05       0.10       8.09 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[58] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_58/CI (FADDX1_RVT)
+                                                  0.05       0.03       8.12 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_58/CO (FADDX1_RVT)
+                                                  0.05       0.10       8.22 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[59] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_59/CI (FADDX1_RVT)
+                                                  0.05       0.03       8.26 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_59/CO (FADDX1_RVT)
+                                                  0.05       0.10       8.36 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[60] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_60/CI (FADDX1_RVT)
+                                                  0.05       0.03       8.39 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_60/CO (FADDX1_RVT)
+                                                  0.05       0.10       8.49 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[61] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_61/CI (FADDX1_RVT)
+                                                  0.05       0.03       8.52 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_61/CO (FADDX1_RVT)
+                                                  0.05       0.10       8.62 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[62] (net)
+                                 1     1.34 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_62/CI (FADDX1_RVT)
+                                                  0.05       0.03       8.65 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_62/CO (FADDX1_RVT)
+                                                  0.04       0.10       8.75 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/carry[63] (net)
+                                 1     0.86 
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_63/A3 (XOR3X2_RVT)
+                                                  0.04       0.02       8.77 r
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/U1_63/Y (XOR3X2_RVT)
+                                                  0.05       0.08       8.86 f
+  fpu_add/fpu_add_frac_dp/add_1_root_add_765_2/SUM[63] (net)
+                                 2     1.02 
+  fpu_add/fpu_add_frac_dp/U274/A (INVX0_RVT)      0.05       0.05       8.91 f
+  fpu_add/fpu_add_frac_dp/U274/Y (INVX0_RVT)      0.03       0.04       8.95 r
+  fpu_add/fpu_add_frac_dp/n1582 (net)
+                                 2     0.96 
+  fpu_add/fpu_add_frac_dp/U82/A (NBUFFX2_RVT)     0.03       0.05       9.00 r
+  fpu_add/fpu_add_frac_dp/U82/Y (NBUFFX2_RVT)     0.02       0.05       9.04 r
+  fpu_add/fpu_add_frac_dp/n35 (net)
+                                 2     1.02 
+  fpu_add/fpu_add_frac_dp/U83/A1 (NAND3X0_RVT)
+                                                  0.02       0.05       9.10 r
+  fpu_add/fpu_add_frac_dp/U83/Y (NAND3X0_RVT)     0.08       0.06       9.16 f
+  fpu_add/fpu_add_frac_dp/n36 (net)
+                                 3     1.53 
+  fpu_add/fpu_add_frac_dp/U202/A1 (OR3X1_RVT)     0.08       0.13       9.28 f
+  fpu_add/fpu_add_frac_dp/U202/Y (OR3X1_RVT)      0.03       0.12       9.40 f
+  fpu_add/fpu_add_frac_dp/n344 (net)
                                  3     1.55 
-  fpu_mul/fpu_mul_exp_dp/U75/A (INVX0_RVT)        0.05       0.14      14.43 f
-  fpu_mul/fpu_mul_exp_dp/U75/Y (INVX0_RVT)        0.04       0.04      14.48 r
-  fpu_mul/fpu_mul_exp_dp/n93 (net)
-                                 2     1.01 
-  fpu_mul/fpu_mul_exp_dp/U6/A (NBUFFX2_RVT)       0.04       0.06      14.53 r
-  fpu_mul/fpu_mul_exp_dp/U6/Y (NBUFFX2_RVT)       0.02       0.05      14.58 r
-  fpu_mul/fpu_mul_exp_dp/n4 (net)
-                                 3     1.46 
-  fpu_mul/fpu_mul_exp_dp/U123/A2 (AO221X1_RVT)
-                                                  0.02       0.13      14.71 r
-  fpu_mul/fpu_mul_exp_dp/U123/Y (AO221X1_RVT)     0.04       0.10      14.81 r
-  fpu_mul/fpu_mul_exp_dp/mul_exp_out_in[3] (net)
-                                 1     0.45 
-  fpu_mul/fpu_mul_exp_dp/i_mul_exp_out/U15/A3 (AO222X1_RVT)
-                                                  0.04       0.01      14.82 r
-  fpu_mul/fpu_mul_exp_dp/i_mul_exp_out/U15/Y (AO222X1_RVT)
-                                                  0.04       0.11      14.93 r
-  fpu_mul/fpu_mul_exp_dp/i_mul_exp_out/n30 (net)
-                                 1     0.74 
-  fpu_mul/fpu_mul_exp_dp/i_mul_exp_out/q_reg[3]/D (DFFX1_RVT)
-                                                  0.04       0.01      14.94 r
-  data arrival time                                                    14.94
+  fpu_add/fpu_add_frac_dp/U63/A (INVX0_RVT)       0.03       0.13       9.53 f
+  fpu_add/fpu_add_frac_dp/U63/Y (INVX0_RVT)       0.03       0.04       9.57 r
+  fpu_add/fpu_add_frac_dp/n1397 (net)
+                                 3     1.57 
+  fpu_add/fpu_add_frac_dp/U211/A (NBUFFX2_RVT)
+                                                  0.03       0.13       9.70 r
+  fpu_add/fpu_add_frac_dp/U211/Y (NBUFFX2_RVT)
+                                                  0.02       0.05       9.75 r
+  fpu_add/fpu_add_frac_dp/n384 (net)
+                                 3     1.60 
+  fpu_add/fpu_add_frac_dp/U27/A1 (AND2X1_RVT)     0.02       0.13       9.89 r
+  fpu_add/fpu_add_frac_dp/U27/Y (AND2X1_RVT)      0.02       0.05       9.94 r
+  fpu_add/fpu_add_frac_dp/a4stg_rnd_frac_pre1_in[12] (net)
+                                 1     0.44 
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre1/q_reg[12]/D (SDFFX1_RVT)
+                                                  0.02       0.01       9.95 r
+  data arrival time                                                     9.95
 
-  clock gclk (rise edge)                          0.10      15.00      15.00
-  clock network delay (ideal)                                0.00      15.00
-  clock reconvergence pessimism                              0.00      15.00
-  clock uncertainty                                         -0.10      14.90
-  fpu_mul/fpu_mul_exp_dp/i_mul_exp_out/q_reg[3]/CLK (DFFX1_RVT)        14.90 r
-  library setup time                                        -0.05      14.85
-  data required time                                                   14.85
+  clock gclk (rise edge)                          0.10      10.00      10.00
+  clock network delay (ideal)                                0.00      10.00
+  clock reconvergence pessimism                              0.00      10.00
+  clock uncertainty                                         -0.10       9.90
+  fpu_add/fpu_add_frac_dp/i_a4stg_rnd_frac_pre1/q_reg[12]/CLK (SDFFX1_RVT)
+                                                                        9.90 r
+  library setup time                                        -0.11       9.79
+  data required time                                                    9.79
   -----------------------------------------------------------------------------
-  data required time                                                   14.85
-  data arrival time                                                   -14.94
+  data required time                                                    9.79
+  data arrival time                                                    -9.95
   -----------------------------------------------------------------------------
-  slack (VIOLATED)                                                     -0.10
+  slack (VIOLATED)                                                     -0.16
 
 
 1

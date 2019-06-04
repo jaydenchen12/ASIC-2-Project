@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Wed May 29 17:30:48 2019
+# Created by write_sdc on Mon Jun  3 22:35:40 2019
 
 ###################################################################
 set sdc_version 2.0
@@ -160,7 +160,7 @@ set_load -pin_load 0.3 [get_ports {fp_cpx_data_ca[2]}]
 set_load -pin_load 0.3 [get_ports {fp_cpx_data_ca[1]}]
 set_load -pin_load 0.3 [get_ports {fp_cpx_data_ca[0]}]
 set_load -pin_load 0.3 [get_ports so]
-create_clock [get_ports gclk]  -period 15  -waveform {0 7.5}
+create_clock [get_ports gclk]  -period 10  -waveform {0 5}
 set_clock_transition -max -rise 0.1 [get_clocks gclk]
 set_clock_transition -max -fall 0.1 [get_clocks gclk]
 set_clock_transition -min -rise 0.1 [get_clocks gclk]

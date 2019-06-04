@@ -12,4 +12,5 @@ report_qor_snapshot > reports/fpu_cts_qor_snapshot.rpt
 report_qor > reports/fpu_cts_qor.rpt
 report_timing -max_paths 100 -delay max > reports/fpu_cts.setup.rpt
 report_timing -max_paths 100 -delay min > reports/fpu_cts.hold.rpt
+report_clock_tree > reports/clock_tree.rpt
 
