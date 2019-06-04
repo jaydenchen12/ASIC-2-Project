@@ -902,7 +902,7 @@ source -echo -verbose pt_pre.tcl
 #@ report_timing -from [all_register -clock_pins] -max_paths 100 -to [all_registers -data_pins]  >> reports/timing.rpt
 #@ report_timing -from [all_registers -clock_pins] -max_paths 100 -to [all_outputs] >> reports/timing.rpt
 #@ report_timing -from [all_inputs] -to [all_outputs] -max_paths 100 >> reports/timing.rpt
-#@ report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type max  >> reports/timing.rpt
+#@ report_timing -from [all_registers -clock_pins] -to [aming.rpt
 #@ #
 #@ report_timing -from [all_registers -clock_pins] -to [all_registers -data_pins] -delay_type min  >> reports/timing.rpt
 #@ report_timing -transition_time -capacitance -nets -input_pins -from [all_registers -clock_pins] -to [all_registers -data_pins]  > reports/timing.tran.cap.rpt
@@ -910,5 +910,8 @@ source -echo -verbose pt_pre.tcl
 #@ 
 #@ ## Save outputs
 #@ save_session output/fpu.session
+#@ # -- End source pt_pre.tcl
+
+sion output/fpu.session
 #@ # -- End source pt_pre.tcl
 
