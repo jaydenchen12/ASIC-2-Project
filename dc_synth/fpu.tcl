@@ -25,14 +25,14 @@ reset_design
 check_design > reports/synth_check_design.rpt
 
 ## Create constraints
-create_clock -period 15 [get_ports gclk]
+create_clock -period 10 [get_ports gclk]
 set_clock_latency -max 0.1 [get_ports gclk]
 set_clock_uncertainty 0.1 [get_ports gclk]
 set_clock_transition 0.1 [get_clocks gclk]
 set_input_delay 0.1 [ remove_from_collection [all_inputs] clk ] -clock gclk
 set_output_delay 0.1 -max -clock [get_clocks gclk] [all_outputs]
 
-set_max_area 1
+set_max_area 0
 set_load 0.3 [all_outputs]
 
 ## Compilation
